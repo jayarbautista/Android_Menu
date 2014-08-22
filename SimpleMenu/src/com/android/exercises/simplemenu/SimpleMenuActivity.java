@@ -6,7 +6,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.CheckBox;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class SimpleMenuActivity extends Activity {
 
@@ -25,12 +24,13 @@ public class SimpleMenuActivity extends Activity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		menu.add(0, 1, 0, "Add");
+		/*menu.add(0, 1, 0, "Add");
 		menu.add(0, 2, 0, "Edit");
 		menu.add(0, 3, 3, "Delete");
 		menu.add(1, 4, 1, "Copy");
 		menu.add(1, 5, 2, "Paste");
-		menu.add(1, 6, 4, "Exit");
+		menu.add(1, 6, 4, "Exit");*/
+		getMenuInflater().inflate(R.menu.simple_menu, menu);
 		
 		return super.onCreateOptionsMenu(menu);
 	}
@@ -38,7 +38,7 @@ public class SimpleMenuActivity extends Activity {
 	@Override
 	public boolean onPrepareOptionsMenu(Menu menu) {
 		// menu items with group ID = 1 are visible if checkbox is checked
-		menu.setGroupVisible(1, mCheckBox.isChecked());
+		menu.setGroupVisible(R.id.group1, mCheckBox.isChecked());
 		return super.onPrepareOptionsMenu(menu);
 	}
 

@@ -4,9 +4,35 @@
     tools:context="com.android.exercises.simplemenu.SimpleMenuActivity" >
 
     <item
-        android:id="@+id/action_settings"
-        android:orderInCategory="100"
-        android:title="@string/action_settings"
-        app:showAsAction="never"/>
+        android:id="@+id/menu_add"
+        android:title="@string/item_add">
+    </item>
+    <item
+        android:id="@+id/menu_edit"
+        android:title="@string/item_edit">
+    </item>
+    <item
+        android:id="@+id/menu_delete"
+        android:orderInCategory="3"
+        android:title="@string/item_delete">
+    </item>
+
+    <group android:id="@+id/group1" >
+        <item
+            android:id="@+id/menu_copy"
+            android:orderInCategory="1"
+            android:title="@string/item_copy">
+        </item>
+        <item
+            android:id="@+id/menu_paste"
+            android:orderInCategory="2"
+            android:title="@string/item_paste">
+        </item>
+        <item
+            android:id="@+id/menu_exit"
+            android:orderInCategory="4"
+            android:title="@string/item_exit">
+        </item>
+    </group>
 
 </menu>
