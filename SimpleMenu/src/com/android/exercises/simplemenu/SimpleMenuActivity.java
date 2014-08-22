@@ -23,13 +23,6 @@ public class SimpleMenuActivity extends Activity {
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		/*menu.add(0, 1, 0, "Add");
-		menu.add(0, 2, 0, "Edit");
-		menu.add(0, 3, 3, "Delete");
-		menu.add(1, 4, 1, "Copy");
-		menu.add(1, 5, 2, "Paste");
-		menu.add(1, 6, 4, "Exit");*/
 		getMenuInflater().inflate(R.menu.simple_menu, menu);
 		
 		return super.onCreateOptionsMenu(menu);
